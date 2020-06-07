@@ -12,4 +12,9 @@
 #
 class ProductProperty < ApplicationRecord
     belongs_to :product
+
+    CHEESE = "CHEESE".freeze
+    SIZE = "SIZE".freeze
+    SAUCE = "SAUCE".freeze
+    TOPPING = "TOPPING".freeze
 end
