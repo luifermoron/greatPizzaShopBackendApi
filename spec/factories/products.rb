@@ -6,6 +6,7 @@
 #  name            :string
 #  description     :text
 #  product_type_id :integer
+#  created_by_user :boolean          default(FALSE)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #

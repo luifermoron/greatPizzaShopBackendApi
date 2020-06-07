@@ -1,7 +1,7 @@
 class ProductRepository
     class << self
       def all_products()
-        products = Product.all.includes(:categories, :product_properties, :product_type)
+        products = Product.where(created_by_user: false).includes(:categories, :product_properties, :product_type)
         products_with_associations = products.map do |product| 
         product.attributes.merge(
           'categories' => product.categories,
