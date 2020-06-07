@@ -2,6 +2,7 @@ class AbstractProductBuilder
   
     def initialize
       reset
+      @product_repository = ProductRepository
     end
 
     def reset 
@@ -15,7 +16,7 @@ class AbstractProductBuilder
     end
 
     private def build_product_type
-      ProductType.find_or_initialize_by({ label: label_type,  value: value_type})
+      @product_repository.find_or_initialize_product_type_by({ label: label_type,  value: value_type})
     end
 
     def build

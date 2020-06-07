@@ -1,5 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
     def index
-        #TO-DO
+        @products = ProductRepository.all_products
+        render json: @products
     end
 end

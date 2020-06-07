@@ -1,9 +1,10 @@
 p '1 Creating Categories'
-pizza_category = Category.find_or_create_by({name: 'Pizzas', description: 'A great description for Pizzas' })
-spaghetti_category = Category.find_or_create_by({ name: 'Spaghetties',  description: 'A great description for Spaghetties' })
-lasagna_category = Category.find_or_create_by({ name: 'Lasagnas',  description: 'A great  description for Lasagnas' })
-salads_category = Category.find_or_create_by({ name: 'Salads',  description: 'A great  description for Salads' })
-top_category = Category.find_or_create_by({ name: 'Top Products',  description: 'A great  description for Top Products' })
+category_repository = CategoryRepository
+pizza_category = category_repository.find_or_create_by({name: 'Pizzas', description: 'A great description for Pizzas' })
+spaghetti_category = category_repository.find_or_create_by({ name: 'Spaghetties',  description: 'A great description for Spaghetties' })
+lasagna_category = category_repository.find_or_create_by({ name: 'Lasagnas',  description: 'A great  description for Lasagnas' })
+salads_category = category_repository.find_or_create_by({ name: 'Salads',  description: 'A great  description for Salads' })
+top_category = category_repository.find_or_create_by({ name: 'Top Products',  description: 'A great  description for Top Products' })
 p '1 Created Categories'
 
 

@@ -1,5 +1,6 @@
 class Api::V1::CategoriesController < ApplicationController
     def index
-        #TO-DO
+        @categories = CategoryRepository.all
+        render json: @categories
     end
 end
