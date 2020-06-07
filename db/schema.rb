@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_07_073542) do
+ActiveRecord::Schema.define(version: 2020_06_07_090240) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -39,19 +39,19 @@ ActiveRecord::Schema.define(version: 2020_06_07_073542) do
   create_table "product_types", force: :cascade do |t|
     t.string "label"
     t.string "value"
-    t.integer "product_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_product_types_on_product_id", unique: true
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.integer "product_type_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_type_id"], name: "index_products_on_product_type_id", unique: true
   end
 
   add_foreign_key "product_properties", "products"
-  add_foreign_key "product_types", "products"
+  add_foreign_key "products", "product_types"
 end

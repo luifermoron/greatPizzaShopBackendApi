@@ -5,12 +5,21 @@
 #  id         :integer          not null, primary key
 #  label      :string
 #  value      :string
-#  product_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 require 'rails_helper'
 
 RSpec.describe ProductType, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has a valid factory' do
+    product_type = FactoryBot.build(:product_type)
+    expect(product_type).to be_valid
+  end
+
+  describe 'validation' do
+    it 'is not valid without label' do
+      product_type = FactoryBot.build(:product_type, label: nil)
+      expect(product_type).not_to be_valid
+    end
+  end
 end

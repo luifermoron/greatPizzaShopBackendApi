@@ -5,12 +5,12 @@
 #  id         :integer          not null, primary key
 #  label      :string
 #  value      :string
-#  product_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-FactoryGirl.define do
+FactoryBot.define do
   factory :product_type do
-    
+    label { 'BrazilianPizza' }
+    value { 'Brazilian Pizza' }
   end
 end

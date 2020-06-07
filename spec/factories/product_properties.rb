@@ -10,7 +10,7 @@
 #  updated_at    :datetime         not null
 #  product_id    :integer          not null
 #
-FactoryGirl.define do
+FactoryBot.define do
   factory :product_property do
     
   end

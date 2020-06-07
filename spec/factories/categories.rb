@@ -8,8 +8,9 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-FactoryGirl.define do
+FactoryBot.define do
   factory :category do
-    
+    name { 'Pizzas' }
+    description { 'Delicious set of pizzas for you' }
   end
 end

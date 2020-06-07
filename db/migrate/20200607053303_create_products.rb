@@ -3,6 +3,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
     create_table :products do |t|
       t.string :name
       t.text :description
+      t.belongs_to :product_type, index: { unique: true }, foreign_key: true
       t.timestamps
     end
   end
