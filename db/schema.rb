@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_06_07_232916) do
     t.integer "product_id"
     t.integer "order_id"
     t.string "state"
+    t.string "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["order_id"], name: "index_state_orders_on_order_id"

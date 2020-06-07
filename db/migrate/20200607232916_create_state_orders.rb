@@ -4,6 +4,7 @@ class CreateStateOrders < ActiveRecord::Migration[6.0]
       t.belongs_to :product, foreign_key: true
       t.belongs_to :order, foreign_key: true
       t.string :state
+      t.string :time
       t.timestamps
     end
   end
