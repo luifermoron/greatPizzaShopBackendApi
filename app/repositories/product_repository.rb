@@ -18,5 +18,9 @@ class ProductRepository
       def find_or_initialize_product_type_by(*attrs)
         ProductType.find_or_initialize_by(*attrs)
       end
+
+      def find(id)
+        Product.find(id)
+      end
     end
 end

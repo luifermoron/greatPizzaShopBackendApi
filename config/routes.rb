@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :categories, only: [:index]
       resources :product_properties, only: [:index]
       resources :products, only: [:index]
+      resources :orders, only: [:create, :get]
     end
   end
 end
