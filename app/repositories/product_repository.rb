@@ -58,10 +58,13 @@ class ProductRepository
         address = permitted_params[:address]
         productBuilder = UserCustomProductBuilder.new
 
-        orders.each do |order|
-          build_custom_product_builder(order, productBuilder)
-          ##productBuilder.build
+        ActiveRecord::Base.transaction do
+          orders.each do |order|
+            build_custom_product_builder(order, productBuilder)
+            ##productBuilder.build
+          end
         end
       end
+      
     end
 end
