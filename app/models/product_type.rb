@@ -10,5 +10,6 @@
 #
 class ProductType < ApplicationRecord
     validates :label, length: {minimum: 1} 
-    validates :value, length: {minimum: 1} 
+    validates :value, length: {minimum: 1}
+    attr_accessor :label, :value
 end
