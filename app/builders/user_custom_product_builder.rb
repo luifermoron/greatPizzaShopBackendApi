@@ -5,6 +5,7 @@ class UserCustomProductBuilder < AbstractProductBuilder
 
     def dup(product)
         @product = product.dup
+        @product.created_by_user = true
         @product.categories= product.categories
         @product.product_type = product.product_type
         @product.product_properties = product.product_properties

@@ -1,11 +1,14 @@
 class Api::V1::OrdersController < ApplicationController
 
     def create
-        #todo: implement order proccess
-        @result = "Simulating process: <br/> TODO: -CREATE ORDER AND OTHERS <br/> -CHECK FOR ORDER STATE <br/> -SIMULATE ORDER STATE <br/> -REPEAT"
         permitted_params = order_params
         @order = ProductRepository.create_order(permitted_params)
         render json: @order
+    end
+
+    def show
+        @order = ProductRepository.simulate_handle_states_order(params[:id])
+        render json: @order.as_json(:include => :state_orders)
     end
 
     private

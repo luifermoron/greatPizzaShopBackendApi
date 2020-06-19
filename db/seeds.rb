@@ -14,24 +14,24 @@ p '2 Creating Products'
 # Personal Hawaiian Pizza
 hawaiian_pizza_builder = Pizzas::HawaiianPizzaBuilder.new
 hawaiian_pizza_builder.add_category(pizza_category)
-hawaiian_pizza_builder.add_product_property("Personal", "2", ProductProperty::SIZE)
+hawaiian_pizza_builder.add_product_property("Personal", "2 Slices", ProductProperty::SIZE)
 hawaiian_pizza_builder.build
 # Medium Hawaiian Pizza
 hawaiian_pizza_builder.product
-hawaiian_pizza_builder.add_product_property("Medium", "4", ProductProperty::SIZE)
+hawaiian_pizza_builder.add_product_property("Medium", "4 Slices", ProductProperty::SIZE)
 hawaiian_pizza_builder.add_category(pizza_category)
 hawaiian_pizza_builder.build
 # Personal Brazilian Pizza
 brazilian_pizza_builder = Pizzas::BrazilianPizzaBuilder.new
 brazilian_pizza_builder.add_category(pizza_category)
 brazilian_pizza_builder.add_category(top_category)
-brazilian_pizza_builder.add_product_property("Personal", "2", ProductProperty::SIZE)
+brazilian_pizza_builder.add_product_property("Personal", "2 Slices", ProductProperty::SIZE)
 brazilian_pizza_builder.build
 # Personal Veggie Pizza
 veggie_pizza_builder = Pizzas::VeggiePizzaBuilder.new
 veggie_pizza_builder.add_category(pizza_category)
 veggie_pizza_builder.add_product_property("Random Topping", "Veggie Topping", ProductProperty::TOPPING)
-veggie_pizza_builder.add_product_property("Large", "8", ProductProperty::SIZE)
+veggie_pizza_builder.add_product_property("Large", "8 Slices", ProductProperty::SIZE)
 veggie_pizza_builder.build
 
 
