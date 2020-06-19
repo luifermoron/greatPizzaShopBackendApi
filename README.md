@@ -3,7 +3,8 @@
 1. Assumption
 2. Installation
 3. State Order Process: how it works
-4. Add new type of products or categories
+4. Architecture
+5. Add new type of products or categories
 
 ## Assumption
 -   Ingredients, size, etc can be see as properties from products.
