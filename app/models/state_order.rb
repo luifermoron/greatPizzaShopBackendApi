@@ -45,3 +45,6 @@ class StateOrder < ApplicationRecord
         end
     end
 end
+
+stateOrder = StateOrder.new
+AASMDiagram::Diagram.new(stateOrder.aasm, 'docs/stateOrder.png')
